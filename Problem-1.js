@@ -1,6 +1,4 @@
 
-// arguments: 2 is the max, 3 is x, 4 is y
-
 
 /* The solution is the answer to
 
@@ -33,9 +31,9 @@ a3 = floor(n/(xy)) * x => n3 = n % (xy)
 
 */
 
-var n = +(process.argv[2]);
-var x = +(process.argv[3]);
-var y = +(process.argv[4]);
+var n = 1000
+var x = 3
+var y = 5
 
 var n1 = Math.floor((n-1) / x);
 var n2 = Math.floor((n-1) / y);
