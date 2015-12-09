@@ -23,4 +23,3 @@ while(primes.length < 10001) {
 }
 
 console.log(primes[10000]);
-console.log(primes[10001]);
