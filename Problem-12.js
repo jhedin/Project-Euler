@@ -11,9 +11,16 @@ function* tri_gen() {
 
 function divisors(t) {
 	var d = 0;
-	for(var i = 1; i < t + 1; i++) {
+	for(var i = 1; i < Math.ceil(Math.sqrt(t)); i++) {
 		if(t % i == 0) {
-			d++;
+			if(i == Math.sqrt(t)) {
+				d = d + 1;
+			}
+			else {
+				d = d + 2;
+			}
+
+			
 		}
 	}
 	return d;
@@ -26,7 +33,7 @@ var d;
 while(1) {
 	t = tri.next().value;
 	d = divisors(t);
-	console.log(t, d);
+	//console.log(t, d);
 	if(d >= 500) {
 		console.log(t);
 		break;
