@@ -4,6 +4,7 @@ function* tri_gen() {
 	var t = 0;
 	while(1) {
 		t = t + i;
+		i++;
 		yield t;
 	}
 }
@@ -20,10 +21,13 @@ function divisors(t) {
 
 var tri = tri_gen();
 var t;
+var d;
 
 while(1) {
 	t = tri.next().value;
-	if(divisors(t) >= 500) {
+	d = divisors(t);
+	console.log(t, d);
+	if(d >= 500) {
 		console.log(t);
 		break;
 	}
